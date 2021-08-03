@@ -1,0 +1,235 @@
+*{   
+   outline: 1px dotted black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+p{
+    color:hsl(0, 0%, 63%);
+    margin: 40px 0;
+}
+
+h2{
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+html,body{
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    font-family: 'Spartan', sans-serif;
+}
+
+
+div#container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+div#hero{
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-image: url('/images/desktop-image-hero-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    height: 65%;
+}
+
+div.left-hero{
+    width: 60%;
+}
+
+div.right-hero{
+    width: 40%;
+}
+
+svg.logo{
+    fill: hsl(0, 0%, 100%);
+}
+
+
+div#nav-bar{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0 0 2%;
+    height: 100%;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    height: auto;
+    position: relative;
+    width: 50%;
+    margin-right: 30%;
+}
+
+nav a:hover::after{
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+    content: "";
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+    display: block;
+    height: 5px;
+    position: relative;   
+}
+
+svg#hamburger-icon,svg#close-icon{
+    display: none;
+}
+
+nav{
+    width: 60%;
+    margin-right: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+
+
+div#slideshow{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 6rem;
+}
+
+
+
+span.shop-now{
+    letter-spacing: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+span.shop-now:hover{
+    color: hsl(0, 0%, 63%);
+    fill: hsl(0, 0%, 63%);;
+}
+
+div#slideshow-toggle{
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    background-color: hsl(0, 0%, 0%);
+    width: 12rem;
+    display: flex;
+}
+
+svg#left-toggle,svg#right-toggle{
+    width: 6rem;
+    height: 5rem;
+    padding: 1.5rem 2rem;
+    fill: transparent;
+    cursor: pointer;
+}
+
+svg#left-toggle:hover,svg#right-toggle:hover{
+    background-color: hsl(0, 0%, 27%);
+}
+
+div#slide-2, div#slide-3{
+    display: none;
+}
+
+div#info{
+    display: flex;
+    height: 35%;
+}
+
+div#info img{
+    width: 25%;
+}
+
+div.about{
+    width: 50%;
+    margin: auto;
+    padding: 0 4rem;
+}
+
+@media screen and (max-width:1100px) {
+   
+    div#container{
+        display: block;
+    }
+   
+
+    div.right-hero,div.left-hero{
+        height: 50%;
+        position: relative;
+        width: 100%;
+    }
+
+    div.right-hero{
+        height: fit-content;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    svg#hamburger-icon{
+        display: flex;
+        fill: hsl(0, 0%, 100%);
+    }
+   
+    div#hero{
+        display: block;
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        height: fit-content;
+    }
+
+    div#nav-bar{
+        width: 100%;
+    }
+
+    div#slideshow{
+        width: 90%;
+        padding: 4rem;
+        position: relative;
+    }
+
+    div#slideshow-toggle{
+       right: 0;
+       left: initial;
+       bottom: initial;
+       top: -5rem
+    }
+
+    div#info{
+        position: relative;
+        display: block;
+    }
+
+    div#info img{
+        width: 100%;
+        height: 100%;
+    }
+
+    div.about{
+        width: 100%;
+        margin: 0;
+        padding: 4rem;
+        height: fit-content;
+    }
+}

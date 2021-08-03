@@ -23,35 +23,44 @@ h2{
 
 html,body{
     font-size: 12px;
+    font-family: 'Spartan', sans-serif;
     height: 100%;
     width: 100%;
-    font-family: 'Spartan', sans-serif;
 }
-
 
 div#container{
     height: 100%;
-    width: 100%;
-    position: relative;
-    display: block;
+}
+
+svg#hamburger-icon,svg#close-icon{
+    display: none;
+    cursor: pointer;
 }
 
 div#hero{
-    width: 100%;
-    position: relative;
     display: flex;
-    background-image: url('/images/desktop-image-hero-1.jpg');
-    background-repeat: no-repeat;
-    background-size: 60% 100%;
-    height: 65%;
+    height: 70%;
 }
 
 div.left-hero{
+    height: 100%;
     width: 60%;
+    background-image: url(/images/desktop-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 div.right-hero{
+    height: 100%;
     width: 40%;
+    display: flex;
+    flex-flow: column;
+}
+
+div#slideshow{
+    width: 90%;
+    margin: auto;
+    padding: 0 4rem;
 }
 
 svg.logo{
@@ -59,22 +68,29 @@ svg.logo{
 }
 
 
-div#nav-bar{
-    width: 60%;
+nav, nav ul{
     display: flex;
-    justify-content: space-between;
-    padding: 5% 0 0 2%;
-    height: 100%;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav{
+    padding-top: 5rem;
 }
 
 nav ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    height: auto;
-    position: relative;
     width: 50%;
-    margin-right: 30%;
+    margin-right: 20rem;
+}
+
+nav li{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
 }
 
 nav a:hover::after{
@@ -87,31 +103,6 @@ nav a:hover::after{
     height: 5px;
     position: relative;   
 }
-
-svg#hamburger-icon,svg#close-icon{
-    display: none;
-}
-
-nav{
-    width: 60%;
-    margin-right: 40%;
-    display: flex;
-    justify-content: space-between;
-}
-
-nav a{
-    text-decoration: none;
-    color: hsl(0, 0%, 100%);
-}
-
-
-div#slideshow{
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    padding: 6rem;
-}
-
 
 
 span.shop-now{
@@ -127,9 +118,6 @@ span.shop-now:hover{
 }
 
 div#slideshow-toggle{
-    position: absolute;
-    bottom: 0;
-    left: 60%;
     background-color: hsl(0, 0%, 0%);
     width: 12rem;
     display: flex;
@@ -153,83 +141,78 @@ div#slide-2, div#slide-3{
 
 div#info{
     display: flex;
-    height: 35%;
+    height: 30%
 }
 
 div#info img{
-    width: 25%;
+    width: 30%;
 }
 
 div.about{
-    width: 50%;
     margin: auto;
-    padding: 0 4rem;
+    width: 30%;
 }
 
-@media screen and (max-width:1100px) {
-   
-    div#container{
-        display: block;
-    }
-   
 
-    div.right-hero,div.left-hero{
-        height: 50%;
-        position: relative;
-        width: 100%;
-    }
+@media screen and (max-width:1100px){
 
-    div.right-hero{
-        height: fit-content;
-    }
+        div#hero{
+            display: block;
+            height: 140%;
+        }
 
-    nav ul{
-        display: none;
-    }
+        div.left-hero,div.right-hero{
+            width: 100%;
+            height: 50%;
+        }
 
-    svg#hamburger-icon{
-        display: flex;
-        fill: hsl(0, 0%, 100%);
-    }
-   
-    div#hero{
-        display: block;
-        background-repeat: no-repeat;
-        background-size: 100% 50%;
-        height: fit-content;
-    }
+        div.left-hero{
+            position: relative;
+            background-image: url('/images/mobile-image-hero-1.jpg');
+        }
 
-    div#nav-bar{
-        width: 100%;
-    }
+        nav ul{
+            display: none;
+        }
 
-    div#slideshow{
-        width: 90%;
-        padding: 4rem;
-        position: relative;
-    }
+        nav{
+            width: 70%;
+            justify-content: space-around;
+        }
+    
+        svg#hamburger-icon{
+            display: flex;
+            fill: hsl(0, 0%, 100%);
+        }
 
-    div#slideshow-toggle{
-       right: 0;
-       left: initial;
-       bottom: initial;
-       top: -5rem
-    }
+        div#slideshow-toggle{
+            position:absolute;
+            right: 0;
+            bottom: 30%;
+        }
 
-    div#info{
-        position: relative;
-        display: block;
-    }
+        div#info{
+            display: block;
+            height: 100%;
+        }
 
-    div#info img{
-        width: 100%;
-        height: 100%;
-    }
+        div.about{
+            width: 100%;
+            height: 40%;
+            display: flex;
+            flex-flow: column;
+        }
 
-    div.about{
-        width: 100%;
-        margin: 0;
-        padding: 4rem;
-        height: fit-content;
-    }
+        div.about-text{
+            width: 90%;
+            margin: auto;
+            height: fit-content;            
+        }
+
+        div#info img{
+            width: 100%;
+            height: 30%;
+        }
+
+
 }

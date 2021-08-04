@@ -155,6 +155,10 @@ div.about{
 
 @media screen and (max-width:1100px){
 
+        html,body{
+            font-size: 12px;
+        }
+
         div#hero{
             display: block;
             height: 140%;
@@ -224,7 +228,7 @@ div.about{
         nav.mobile a{
             color: hsl(0, 0%, 0%);
             font-weight: 700;
-            font-size: 1.5em;
+            font-size: 1em;
         }
 
         nav.mobile svg.logo{
@@ -235,8 +239,7 @@ div.about{
             width: 100%;
             justify-content: space-around;
             height: fit-content;
-            margin: auto;
-            padding-left: 7rem;    
+            margin: auto;   
         }
         
         nav.mobile a:hover::after{

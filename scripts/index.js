@@ -73,4 +73,26 @@ const checkScreenSizeInterval = () =>{
     device = checkScreenSize()
 }
 
+
+const hamburgerIcon = document.getElementById("hamburger-icon");
+const closeIcon = document.getElementById("close-icon");
+navBarDiv = document.getElementById('nav-bar');
+nav = document.querySelector('nav');
+
+// Hamburger Menu
+closeIcon.addEventListener('click', () =>{
+    navBarDiv.classList.toggle('mobile');
+    nav.classList.toggle('mobile');
+    hamburgerIcon.style.display = 'flex'
+    closeIcon.style.display = 'none'
+});
+
+hamburgerIcon.addEventListener('click', ()=>{
+    navBarDiv.classList.toggle('mobile');
+    nav.classList.toggle('mobile');
+    hamburgerIcon.style.display = 'none'
+    closeIcon.style.display = 'flex'
+});
+
+
 setInterval(checkScreenSizeInterval,10);

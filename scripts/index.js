@@ -74,8 +74,9 @@ const checkScreenSizeInterval = () =>{
 }
 
 
-const hamburgerIcon = document.getElementById("hamburger-icon");
-const closeIcon = document.getElementById("close-icon");
+
+const hamburgerIcon = document.getElementsByClassName("hamburger-icon")[0];
+const closeIcon = document.getElementsByClassName("close-icon")[0];
 navBarDiv = document.getElementById('nav-bar');
 nav = document.querySelector('nav');
 
@@ -83,15 +84,19 @@ nav = document.querySelector('nav');
 closeIcon.addEventListener('click', () =>{
     navBarDiv.classList.toggle('mobile');
     nav.classList.toggle('mobile');
-    hamburgerIcon.style.display = 'flex'
-    closeIcon.style.display = 'none'
+    hamburgerIcon.classList.toggle('hide-hamburger-icon')
+    closeIcon.classList.toggle('show-close-icon');
+    //hamburgerIcon.style.display = 'flex'
+    //closeIcon.style.display = 'none'
 });
 
 hamburgerIcon.addEventListener('click', ()=>{
     navBarDiv.classList.toggle('mobile');
     nav.classList.toggle('mobile');
-    hamburgerIcon.style.display = 'none'
-    closeIcon.style.display = 'flex'
+    //hamburgerIcon.style.display = 'none'
+    //closeIcon.style.display = 'flex'
+    hamburgerIcon.classList.toggle('hide-hamburger-icon')
+    closeIcon.classList.toggle('show-close-icon');
 });
 
 

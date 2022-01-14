@@ -12,10 +12,10 @@ leftToggleButton.addEventListener('click', ()=> {
             slideNum=numSlides;
             slideshow.children[slideNum-1].style.display = 'block';
             if(device=='mobile'){
-                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('../images/mobile-image-hero-${slideNum}.jpg')`;
+                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('./images/mobile-image-hero-${slideNum}.jpg')`;
             }
             else{
-                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('../images/desktop-image-hero-${slideNum}.jpg')`;
+                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('./images/desktop-image-hero-${slideNum}.jpg')`;
             }
       
         }
@@ -24,10 +24,10 @@ leftToggleButton.addEventListener('click', ()=> {
             slideNum--;
             slideshow.children[slideNum-1].style.display = 'block';
             if(device=='mobile'){
-                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('../images/mobile-image-hero-${slideNum}.jpg')`;
+                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('./images/mobile-image-hero-${slideNum}.jpg')`;
             }
             else{
-                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('../images/desktop-image-hero-${slideNum}.jpg')`;
+                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('./images/desktop-image-hero-${slideNum}.jpg')`;
             }
         }
     }
@@ -39,10 +39,10 @@ rightToggleButton.addEventListener('click', ()=> {
             slideNum=1;
             slideshow.children[slideNum-1].style.display = 'block';
             if(device=='mobile'){
-                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('../images/mobile-image-hero-${slideNum}.jpg')`;
+                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('./images/mobile-image-hero-${slideNum}.jpg')`;
             }
             else{
-                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('../images/desktop-image-hero-${slideNum}.jpg')`;
+                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('./images/desktop-image-hero-${slideNum}.jpg')`;
             }
       
         }
@@ -51,10 +51,10 @@ rightToggleButton.addEventListener('click', ()=> {
             slideNum++;
             slideshow.children[slideNum-1].style.display = 'block';
             if(device=='mobile'){
-                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('../images/mobile-image-hero-${slideNum}.jpg')`;
+                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('./images/mobile-image-hero-${slideNum}.jpg')`;
             }
             else{
-                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('../images/desktop-image-hero-${slideNum}.jpg')`;
+                document.getElementsByClassName('left-hero')[0].style.backgroundImage = `url('./images/desktop-image-hero-${slideNum}.jpg')`;
             }
       
         }
